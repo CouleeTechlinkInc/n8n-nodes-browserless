@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  packageName: 'n8n-nodes-browserless',
+  packageName: 'n8n-nodes-ct-browserless',
   credentials: {
     ctBrowserlessApi: {
       displayName: 'CT Browserless API',
@@ -18,7 +18,7 @@ module.exports = {
       openapi: path.resolve(__dirname, 'openapi.yml'),
       icon: 'file:browserless.svg',
       baseUrl: '=\{\{$credentials.url\}\}',
-      targetDir: path.resolve(__dirname, 'nodes/Browserless/v2'),
+      targetDir: path.resolve(__dirname, 'nodes/CTBrowserless/v2'),
       version: 2,
       tags: ['Browser REST APIs'],
       operations: [

@@ -1,5 +1,5 @@
 {
-  "name": "@couleetech/n8n-nodes-browserless",
+  "name": "@couleetech/n8n-nodes-ct-browserless",
   "version": "2.0.2",
   "description": "n8n mode integrate with Browserless platform",
   "keywords": [
@@ -41,10 +41,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/BrowserlessApi.credentials.js"
+      "dist/credentials/CTBrowserlessApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/Browserless/Browserless.node.js"
+      "dist/nodes/CTBrowserless/Browserless.node.js"
     ]
   },
   "devDependencies": {

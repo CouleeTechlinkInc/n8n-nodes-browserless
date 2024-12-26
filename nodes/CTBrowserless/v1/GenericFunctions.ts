@@ -68,7 +68,7 @@ export async function browserlessApiRequest(
 	try {
 		return (await this.helpers.httpRequestWithAuthentication.call(
 			this,
-			'browserlessApi',
+			'ctBrowserlessApi',
 			options,
 		)) as IN8nHttpFullResponse;
 	} catch (error) {
