@@ -1,6 +1,6 @@
 {
   "name": "@couleetech/n8n-nodes-ct-browserless",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "n8n mode integrate with Browserless platform",
   "keywords": [
     "n8n-community-node-package",
