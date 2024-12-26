@@ -7,8 +7,8 @@ import { Browserless as BrowserlessV2 } from './v2/Browserless.node';
 export class Browserless extends VersionedNodeType {
 	constructor() {
 		const baseDescription: INodeTypeBaseDescription = {
-			displayName: 'Browserless',
-			name: 'browserless',
+			displayName: 'CT Browserless',
+			name: 'ctBrowserless',
 			icon: 'file:browserless.svg',
 			group: ['transform'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

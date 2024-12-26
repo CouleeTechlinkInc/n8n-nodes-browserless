@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-browserless",
+  "name": "@couleetech/n8n-nodes-browserless",
   "version": "1.1.3",
   "description": "n8n mode integrate with Browserless platform",
   "keywords": [
@@ -11,14 +11,14 @@
     "automation"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/minhlucvan/n8n-nodes-browserless",
+  "homepage": "https://github.com/couleetech/n8n-nodes-browserless",
   "author": {
     "name": "Minh Luc",
     "email": "luk.mink@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/minhlucvan/n8n-nodes-browserless"
+    "url": "https://github.com/couleetech/n8n-nodes-browserless"
   },
   "main": "index.js",
   "scripts": {

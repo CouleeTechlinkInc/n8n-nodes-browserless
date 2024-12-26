@@ -153,7 +153,27 @@ export async function browserlessApiRequestFuction(
 	options: BrowserlessApiRequestFnOptions,
 ) {
 	const body: fn = {
-		...options.options,
+		code: `
+			async () => {
+				const cookies = await page.cookies();
+				const client = await page.target().createCDPSession();
+				const storage = await client.send('Storage.getStorageKeyValueEntries', {
+					storageKey: '*'
+				});
+				const result = await ${options.options.code};
+				return {
+					result,
+					cookies,
+					storage,
+					sessionData: {
+						url: page.url(),
+						title: await page.title(),
+					}
+				};
+			}
+		`,
+		context: options.options.context,
+		detached: options.options.detached,
 	};
 	const { error, value } = schems.fn.validate(body);
 	if (error) {

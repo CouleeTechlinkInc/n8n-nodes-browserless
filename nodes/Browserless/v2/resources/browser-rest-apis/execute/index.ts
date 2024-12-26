@@ -33,6 +33,29 @@ const rawOption: INodePropertyOptions = {
     request: {
       method: 'POST',
       url: '=/function',
+      body: {
+        code: `
+          async () => {
+            const cookies = await page.cookies();
+            const client = await page.target().createCDPSession();
+            const storage = await client.send('Storage.getStorageKeyValueEntries', {
+              storageKey: '*'
+            });
+            const result = await {{$parameter.code}};
+            return {
+              result,
+              cookies,
+              storage,
+              sessionData: {
+                url: page.url(),
+                title: await page.title(),
+              }
+            };
+          }
+        `,
+        context: '={{$parameter.context}}',
+        detached: '={{$parameter.detached}}'
+      }
     },
     output: {
       postReceive: [

@@ -2,6 +2,7 @@ import {
   INodeType,
   INodeTypeBaseDescription,
   INodeTypeDescription,
+  NodeConnectionType,
 } from 'n8n-workflow'
 
 import { properties } from './Browserless.properties'
@@ -15,8 +16,8 @@ export class Browserless implements INodeType {
   constructor (baseDescription: INodeTypeBaseDescription) {
     this.description = {
       ...baseDescription,
-      displayName: 'Browserless',
-      name: 'browserless',
+      displayName: 'CT Browserless',
+      name: 'ctBrowserless',
       icon: 'file:browserless.svg',
       group: ['transform'],
       version: 2,
@@ -25,8 +26,14 @@ export class Browserless implements INodeType {
       defaults: {
         name: 'Browserless',
       },
-      inputs: ['main'],
-      outputs: ['main'],
+      inputs: [{
+        type: NodeConnectionType.Main,
+        required: true,
+      }],
+      outputs: [{
+        type: NodeConnectionType.Main,
+        required: true,
+      }],
       credentials: [
         {
           displayName: 'Browserless API',
