@@ -5,9 +5,9 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class BrowserlessApi implements ICredentialType {
-	displayName = 'Browserless Credentials API';
-	name = 'browserlessApi';
+export class CTBrowserlessApi implements ICredentialType {
+	displayName = 'CT Browserless Credentials API';
+	name = 'ctBrowserlessApi';
 	documentationUrl = 'https://docs.browserless.io/docs/token.html#docsNav';
 
 	properties: INodeProperties[] = [

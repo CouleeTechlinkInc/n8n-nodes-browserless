@@ -3,16 +3,16 @@ const path = require('path');
 module.exports = {
   packageName: 'n8n-nodes-browserless',
   credentials: {
-    browserlessApi: {
-      displayName: 'Browserless API',
-      name: 'browserlessApi',
-      className: 'BrowserlessApi',
+    ctBrowserlessApi: {
+      displayName: 'CT Browserless API',
+      name: 'ctBrowserlessApi',
+      className: 'CTBrowserlessApi',
     },
   },
   nodes: {
-    browserless: {
-      displayName: 'Browserless',
-      name: 'Browserless',
+    ctBrowserless: {
+      displayName: 'CT Browserless',
+      name: 'ctBrowserless',
       preset: 'versioned',
       description: 'Browserless API',
       openapi: path.resolve(__dirname, 'openapi.yml'),
@@ -32,8 +32,8 @@ module.exports = {
         '/download'
       ],
       credentials: [{
-        displayName: 'Browserless API',
-        name: 'browserlessApi',
+        displayName: 'CT Browserless API',
+        name: 'ctBrowserlessApi',
         required: true,
       }],
       requestDefaults: {

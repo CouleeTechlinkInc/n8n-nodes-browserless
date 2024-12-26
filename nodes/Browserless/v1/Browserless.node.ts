@@ -60,7 +60,7 @@ export class Browserless implements INodeType {
 			}],
 			credentials: [
 				{
-					name: 'browserlessApi',
+					name: 'ctBrowserlessApi',
 					required: true,
 				},
 			],

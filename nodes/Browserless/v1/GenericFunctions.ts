@@ -43,7 +43,7 @@ export async function browserlessApiRequest(
 	qs: IDataObject = {},
 	extradOptions: Partial<IHttpRequestOptions> = {},
 ): Promise<IN8nHttpFullResponse | IN8nHttpResponse> {
-	const credentials = (await this.getCredentials('browserlessApi')) as BrowserlessCredentials;
+	const credentials = (await this.getCredentials('ctBrowserlessApi')) as BrowserlessCredentials;
 	const options: IHttpRequestOptions = {
 		...extradOptions,
 		method,
